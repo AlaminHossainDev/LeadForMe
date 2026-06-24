@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --color-app-bg: #0a0a0c;
+  --color-panel-bg: #111115;
+  --color-sidebar-bg: #0d0d11;
+  --color-input-bg: #18181f;
+  --color-border-p: #1e1e24;
+  --color-border-s: #262630;
+  --color-text-p: #ffffff;
+  --color-text-s: #a1a1aa;
+}
+
+.light {
+  --color-app-bg: #f4f4f7;
+  --color-panel-bg: #ffffff;
+  --color-sidebar-bg: #fcfcfd;
+  --color-input-bg: #f4f4f5;
+  --color-border-p: #e4e4e7;
+  --color-border-s: #eaeaea;
+  --color-text-p: #09090b;
+  --color-text-s: #52525b;
+}
+
+/* Elegant Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-app-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-s);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-p);
+}
+
+body {
+  background-color: var(--color-app-bg);
+  color: var(--color-text-s);
+  font-family: var(--font-sans), sans-serif;
+  transition-property: background-color, color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 150ms;
+}

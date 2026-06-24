@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "A business lead with website analysis and outreach info",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "industry": { "type": "string" },
+        "website": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "opportunityScore": { "type": "integer" },
+        "status": { "type": "string", "enum": ["discovered", "analyzed", "contacted", "won", "lost"] },
+        "siteSpeed": { "type": "number" },
+        "mobileFriendly": { "type": "boolean" },
+        "seoScore": { "type": "integer" },
+        "sslEnabled": { "type": "boolean" },
+        "aiAudit": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "website", "status", "createdAt", "updatedAt"]
+    },
+    "UserSettings": {
+      "title": "UserSettings",
+      "description": "User profile and agency settings",
+      "type": "object",
+      "properties": {
+        "agencyName": { "type": "string" },
+        "agencyWebsite": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of business leads"
+    },
+    "/settings/{userId}": {
+      "schema": "UserSettings",
+      "description": "User specific agency settings"
+    }
+  }
+}

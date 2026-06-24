@@ -1,0 +1,8 @@
+{
+  "name": "LeadForMe",
+  "description": "Find high-intent businesses that need a new website before your competitors do.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
